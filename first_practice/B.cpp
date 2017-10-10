@@ -6,7 +6,7 @@ using namespace std;
 
 #define ll long long
 
-double data[2000005];
+double data[2000001];
 
 int main()
 {
