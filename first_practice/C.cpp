@@ -38,7 +38,6 @@ Matrix cal_fab(int n, Matrix base)
 	else
 	{
 		Matrix hello(1, 0, 0, 1);
-
 //快速幂
 		while (n > 1)
 		{
