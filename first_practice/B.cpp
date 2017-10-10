@@ -11,7 +11,7 @@ double data[2000005];
 int main()
 {
 	int n, m;
-	while(scanf("%d%d", &n, &m) == 2)
+	while(2 == scanf("%d %d", &n, &m))
 	{
 		int temp = n + m;
 		if (0 == temp)
@@ -25,7 +25,7 @@ int main()
 				scanf("%lf",&data[i]);
 			}
 			sort(data, data + temp);
-			if (temp % 2 == 1)
+			if (1 == (temp % 2))
 			{
 				printf("%.1lf\n", data[temp / 2]);
 			}
@@ -34,7 +34,6 @@ int main()
 				printf("%.1lf\n", (data[temp / 2] + data[temp / 2 - 1]) / 2);
 			}
 		}
-
 	}
 	return 0;
 }
