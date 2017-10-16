@@ -50,20 +50,18 @@ ll lilo(int start, int end) {
 int main() {
 	int n, t, p, q;
 	while (1 == scanf("%d", &n)) {
-		for (int i = 0; i < n; ++i) {
+		for (int i = 0; i < n; ++i)
 			scanf("%lld", &a[i]);
-		}
 		scanf("%d", &t);
 		for (int i = 0; i < t; ++i) {
 			scanf("%d %d", &p, &q);
-			if (p >= q) {
+			if (p >= q)
 				swap(p, q);
-			}
-			for (int j = p; j <= q; ++j) {
+			for (int j = p; j <= q; ++j)
 				b[j] = a[j];
-			}
 			printf("%lld\n", lilo(p, q));
 		}
 	}
 	return 0;
 }
+
