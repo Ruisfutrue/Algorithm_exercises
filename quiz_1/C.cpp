@@ -15,15 +15,13 @@ struct Way {
     }
 } ways[maxN];
 
-void init(Way * arr) {
+void cal_ways(Way * arr) {
     arr[1] = Way(1, 1, 0);
     arr[2] = Way(1, 1, 0);
     arr[3] = Way(2, 2, 0);
-}
-
-void cal_ways(Way * arr) {
-    init(arr);
+    
     for (int i = 4; i < maxN ; ++i) {
+        // 递推公式
         arr[i].safe = arr[i - 1].total + arr[i - 2].total;
         arr[i].once = arr[i - 3].safe;
         arr[i].total = arr[i].safe + arr[i].once;
