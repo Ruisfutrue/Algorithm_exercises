@@ -16,7 +16,7 @@ ll merge(int start, int mid, int end) {
 		while (j <= end && b[i] > 2 * b[j])
 			++j;
 		cnt += (j - mid - 1);
-    ++i;
+		++i;
 	}
   
 	i = start;
@@ -41,7 +41,8 @@ ll lilo(int start, int end) {
 	ll cnt = 0;
 	if (start < end) {
 		int mid = (start + end) / 2;
-		cnt += lilo(start, mid) + lilo(mid + 1, end) + merge(start, mid, end);
+		cnt += (lilo(start, mid) + 
+			lilo(mid + 1, end) + merge(start, mid, end));
 	}
 	return cnt;
 }
