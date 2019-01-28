@@ -24,3 +24,4 @@ int main() {
         printf("%.2lf%%\n", D[n] / factorial(n) * 100);
     return 0;
 }
+// test Git push 
